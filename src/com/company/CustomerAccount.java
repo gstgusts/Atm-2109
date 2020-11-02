@@ -12,4 +12,14 @@ public class CustomerAccount {
     public String getNumber() {
         return number;
     }
+
+    public boolean getMoney(int amount) {
+        if(balance < amount) {
+            return false;
+        }
+
+        balance -= amount;
+
+        return true;
+    }
 }
